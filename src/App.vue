@@ -79,12 +79,12 @@ watch(weights, newWeights => {
       <div class="weight-history">
         <h2>Weight History</h2>
         <ul>
-          <li v-for="weight in weights">
+          <li v-for="weight in weights" :key="weight.index">
             <span>
-              {{ weight.weight}}
+              {{ weight.weight }}
             </span>
             <small>
-              {{ new Date(weight.date).toLocaleDateString()}}
+              {{ new Date(weight.date).toLocaleDateString() }}
             </small>
           </li>
         </ul>
